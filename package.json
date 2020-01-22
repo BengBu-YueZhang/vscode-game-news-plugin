@@ -27,24 +27,29 @@
 				}
 			}
 		},
-		"commands": [{
-			"command": "extension.游民星空",
-			"title": "游民星空",
-			"category": "Game"
-		}, {
-			"command": "extension.IGN",
-			"title": "IGN",
-			"category": "Game"
-		}, {
-			"command": "extension.GameSpot",
-			"title": "GameSpot",
-			"category": "Game"
-		}, {
-			"command": "extension.GameNews",
-			"title": "GameNews",
-			"category": "Game"
-		}],
-		"keybindings":[
+		"commands": [
+			{
+				"command": "extension.游民星空",
+				"title": "游民星空",
+				"category": "Game"
+			},
+			{
+				"command": "extension.IGN",
+				"title": "IGN",
+				"category": "Game"
+			},
+			{
+				"command": "extension.GameSpot",
+				"title": "GameSpot",
+				"category": "Game"
+			},
+			{
+				"command": "extension.GameNews",
+				"title": "GameNews",
+				"category": "Game"
+			}
+		],
+		"keybindings": [
 			{
 				"command": "extension.GameNews",
 				"key": "ctrl+g+n",
@@ -66,8 +71,13 @@
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
 		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"ts-loader": "^6.2.1",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10"
 	}
 }
