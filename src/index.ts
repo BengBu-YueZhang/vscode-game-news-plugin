@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import news, { NewsRange } from './news';
+import news from './news';
 
 export function activate(context: vscode.ExtensionContext) {
 

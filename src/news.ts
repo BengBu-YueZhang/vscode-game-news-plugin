@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import {
-    jsonp,
     handleError
 } from './util';
 import * as pug from 'pug';
