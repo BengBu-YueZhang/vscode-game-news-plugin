@@ -10,26 +10,39 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld",
-		"onCommand:extension.摸鱼",
-		"onCommand:extension.划水",
-		"onCommand:extension.loafOnAJob"
+		"onCommand:extension.游民星空",
+		"onCommand:extension.IGN",
+		"onCommand:extension.GameSpot",
+		"onCommand:extension.GameNews"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"configuration": {
 			"title": "GameNews Configuration",
 			"properties": {
-				"gamenews.source": {
-					"type": "array",
-					"default": ["gamespot", "ign", "gamersky"],
-					"description": "news sources"
+				"gamenews.range": {
+					"type": "number",
+					"default": 1,
+					"description": "过去几小时内的游戏新闻(最大可以设置3个小时前)"
 				}
 			}
 		},
 		"commands": [{
-			"command": "extension.helloWorld",
-			"title": "Hello World"
+			"command": "extension.游民星空",
+			"title": "游民星空",
+			"category": "Game"
+		}, {
+			"command": "extension.IGN",
+			"title": "IGN",
+			"category": "Game"
+		}, {
+			"command": "extension.GameSpot",
+			"title": "GameSpot",
+			"category": "Game"
+		}, {
+			"command": "extension.GameNews",
+			"title": "GameNews",
+			"category": "Game"
 		}]
 	},
 	"scripts": {
