@@ -1,7 +1,7 @@
 {
 	"name": "game-news",
-	"displayName": "game-news",
-	"description": "news list",
+	"displayName": "gamenews",
+	"description": "surreptitiously browsing game news during work hours (gamespot, ign, gamersky)",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -17,6 +17,16 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": {
+			"title": "GameNews Configuration",
+			"properties": {
+				"gamenews.source": {
+					"type": "array",
+					"default": ["gamespot", "ign", "gamersky"],
+					"description": "news sources"
+				}
+			}
+		},
 		"commands": [{
 			"command": "extension.helloWorld",
 			"title": "Hello World"
