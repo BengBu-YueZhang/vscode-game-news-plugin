@@ -10,7 +10,10 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.helloWorld",
+		"onCommand:extension.摸鱼",
+		"onCommand:extension.划水",
+		"onCommand:extension.loafOnAJob"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
