@@ -1,21 +1,22 @@
 import * as vscode from 'vscode';
+import news, { NewsRange } from './news';
 
 export function activate(context: vscode.ExtensionContext) {
 
 	const IGN = vscode.commands.registerCommand('extension.IGN', () => {
-		vscode.window.showInformationMessage('IGN');
+		news(context, 'ign', 'IGN', 'IGN');
 	});
 
 	const GameSpot = vscode.commands.registerCommand('extension.GameSpot', () => {
-		vscode.window.showInformationMessage('GameSpot');
+		news(context, 'gamespot', 'GameSpot', 'GameSpot');
 	});
 
 	const 游民星空 = vscode.commands.registerCommand('extension.游民星空', () => {
-		vscode.window.showInformationMessage('游民星空');
+		news(context, 'gamersky', '游民星空', '游民星空');
 	});
 
 	const GameNews = vscode.commands.registerCommand('extension.GameNews', () => {
-		vscode.window.showInformationMessage('GameNews');
+		news(context, 'newslist', '游戏新闻', 'All');
 	});
 
 	context.subscriptions.push(IGN);
