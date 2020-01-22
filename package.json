@@ -15,7 +15,7 @@
 		"onCommand:extension.GameSpot",
 		"onCommand:extension.GameNews"
 	],
-	"main": "./out/extension.js",
+	"main": "./out/index.js",
 	"contributes": {
 		"configuration": {
 			"title": "GameNews Configuration",
