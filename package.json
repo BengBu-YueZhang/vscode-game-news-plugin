@@ -43,7 +43,14 @@
 			"command": "extension.GameNews",
 			"title": "GameNews",
 			"category": "Game"
-		}]
+		}],
+		"keybindings":[
+			{
+				"command": "extension.GameNews",
+				"key": "ctrl+g+n",
+				"mac": "cmd+g+n"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
