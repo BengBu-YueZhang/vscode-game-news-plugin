@@ -11,3 +11,18 @@ export function handleError (error: any, title: string) {
     const tpl = path.resolve(__dirname, './../views/error.pug');
     panel.webview.html = pug.renderFile(tpl); 
 }
+
+export function getGMT (): number {
+    const ct = new Date();
+    const gmtOffset = ct.getTimezoneOffset();
+    return ct.getTime() + gmtOffset;
+}
+
+export function getTString (t: number): string {
+    const ct = new Date(t);
+    const year = ct.getFullYear();
+    const month = ct.getMonth() + 1;
+    const day = ct.getDate();
+    const hours = ct.getHours();
+    return `${year}-${month}-${day}-${hours}`;
+}
