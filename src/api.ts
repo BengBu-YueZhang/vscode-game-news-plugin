@@ -3,7 +3,13 @@ import {
     getTString
 } from './util';
 
-export default async function api () {
+export interface INews {
+    title: string;
+    src: string;
+    source: string;
+}
+
+export default async function api (): Promise<INews[]> {
     try {
         const filename = `${getTString(new Date().getTime() - 1 * 60 * 60 * 1000)}.js`;
         const url = `http://news.bengbuzhangyue.xyz/${filename}`;

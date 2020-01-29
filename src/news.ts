@@ -1,7 +1,8 @@
 import * as vscode from 'vscode';
 import {
     handleError,
-    getRenderFileOptions
+    getPugOptions,
+    filterNewsRange
 } from './util';
 import * as pug from 'pug';
 import * as path from 'path';
@@ -13,14 +14,15 @@ export default async function news (
     context: vscode.ExtensionContext,
     viewType: string,
     title: string,
-    newRange: NewsRange
+    newsRange: NewsRange
 ) {
     try {
         const data = await vscode.window.withProgress({
             title: '🎮游戏新闻加载中',
             location: vscode.ProgressLocation.Notification
         }, async () => {
-            return await api();
+            const news = await api();
+            return filterNewsRange(news, newsRange);
         });
         const webviewDir = path.resolve(context.extensionPath, './../views');
         const panel = vscode.window.createWebviewPanel(
@@ -34,7 +36,9 @@ export default async function news (
             }
         );
         const tpl = path.resolve(__dirname, './../views/index.pug');
-        const options = getRenderFileOptions();
+        const options = getPugOptions(context, {
+            news: data
+        });
         panel.webview.html = pug.renderFile(tpl, options); 
     } catch (error) {
         handleError(error, title);
