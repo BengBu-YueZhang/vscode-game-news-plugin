@@ -21,5 +21,13 @@ export function getTString (t: number): string {
     return `${year}-${month}-${day}-${hours}`;
 }
 
-export function getLocalURI () {
+export function getLocalURI (context: vscode.ExtensionContext, filePath: string) {
+    const webviewDir = path.resolve(context.extensionPath, 'views');
+    return vscode.Uri.file(path.join(webviewDir, ...filePath.split('/'))).with({
+        scheme: 'vscode-resource'
+    });
+}
+
+export function getRenderFileOptions () {
+    return {};
 }

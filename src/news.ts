@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import {
-    handleError
+    handleError,
+    getRenderFileOptions
 } from './util';
 import * as pug from 'pug';
 import * as path from 'path';
@@ -21,7 +22,7 @@ export default async function news (
         }, async () => {
             return await api();
         });
-        const webviewDir = path.resolve(__dirname, './../views');
+        const webviewDir = path.resolve(context.extensionPath, './../views');
         const panel = vscode.window.createWebviewPanel(
             viewType,
             title,
@@ -33,8 +34,8 @@ export default async function news (
             }
         );
         const tpl = path.resolve(__dirname, './../views/index.pug');
-        panel.webview.html = pug.renderFile(tpl, {
-        }); 
+        const options = getRenderFileOptions();
+        panel.webview.html = pug.renderFile(tpl, options); 
     } catch (error) {
         handleError(error, title);
     }   
