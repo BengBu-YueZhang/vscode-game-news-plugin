@@ -5,7 +5,7 @@ import {
 import * as pug from 'pug';
 import * as path from 'path';
 
-export type NewsRange = 'IGN' | 'GameSpot' | '游民星空' | 'All';
+export type NewsRange = 'IGN' | '机核网' | '游民星空' | 'All';
 
 export default async function news (
     context: vscode.ExtensionContext,

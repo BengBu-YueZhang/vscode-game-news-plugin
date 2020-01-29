@@ -1,7 +1,7 @@
 {
 	"name": "game-news",
 	"displayName": "gamenews",
-	"description": "surreptitiously browsing game news during work hours (gamespot, ign, gamersky)",
+	"description": "surreptitiously browsing game news during work hours (机核网, ign, 游民星空)",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -12,7 +12,7 @@
 	"activationEvents": [
 		"onCommand:extension.游民星空",
 		"onCommand:extension.IGN",
-		"onCommand:extension.GameSpot",
+		"onCommand:extension.机核网",
 		"onCommand:extension.GameNews"
 	],
 	"main": "./out/index.js",
@@ -39,8 +39,8 @@
 				"category": "Game"
 			},
 			{
-				"command": "extension.GameSpot",
-				"title": "GameSpot",
+				"command": "extension.机核网",
+				"title": "机核网",
 				"category": "Game"
 			},
 			{

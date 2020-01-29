@@ -7,8 +7,8 @@ export function activate(context: vscode.ExtensionContext) {
 		news(context, 'ign', 'IGN', 'IGN');
 	});
 
-	const GameSpot = vscode.commands.registerCommand('extension.GameSpot', () => {
-		news(context, 'gamespot', 'GameSpot', 'GameSpot');
+	const 机核网 = vscode.commands.registerCommand('extension.机核网', () => {
+		news(context, 'gcores', '机核网', '机核网');
 	});
 
 	const 游民星空 = vscode.commands.registerCommand('extension.游民星空', () => {
@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(IGN);
-	context.subscriptions.push(GameSpot);
+	context.subscriptions.push(机核网);
 	context.subscriptions.push(游民星空);
 	context.subscriptions.push(GameNews);
 }
