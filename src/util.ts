@@ -12,12 +12,6 @@ export function handleError (error: any, title: string) {
     panel.webview.html = pug.renderFile(tpl); 
 }
 
-export function getGMT (): number {
-    const ct = new Date();
-    const gmtOffset = ct.getTimezoneOffset();
-    return ct.getTime() + gmtOffset;
-}
-
 export function getTString (t: number): string {
     const ct = new Date(t);
     const year = ct.getFullYear();
@@ -25,4 +19,7 @@ export function getTString (t: number): string {
     const day = ct.getDate();
     const hours = ct.getHours();
     return `${year}-${month}-${day}-${hours}`;
+}
+
+export function getLocalURI () {
 }

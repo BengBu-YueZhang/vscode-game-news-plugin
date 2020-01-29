@@ -4,6 +4,7 @@ import {
 } from './util';
 import * as pug from 'pug';
 import * as path from 'path';
+import api from './api';
 
 export type NewsRange = 'IGN' | '机核网' | '游民星空' | 'All';
 
@@ -14,10 +15,11 @@ export default async function news (
     newRange: NewsRange
 ) {
     try {
-        await vscode.window.withProgress({
+        const data = await vscode.window.withProgress({
             title: '🎮游戏新闻加载中',
             location: vscode.ProgressLocation.Notification
         }, async () => {
+            return await api();
         });
         const webviewDir = path.resolve(__dirname, './../views');
         const panel = vscode.window.createWebviewPanel(
