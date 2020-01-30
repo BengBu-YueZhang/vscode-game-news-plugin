@@ -8,13 +8,17 @@ export interface IData {
     [key: string]: any;
 }
 
-export function handleError (error: any, title: string) {
+export function handleError (
+    context: vscode.ExtensionContext,
+    error: any,
+    title: string
+) {
     const panel = vscode.window.createWebviewPanel(
         'error',
         title,
         vscode.ViewColumn.One
     );
-    const tpl = path.resolve(__dirname, './../views/error.pug');
+    const tpl = path.resolve(context.extensionPath, './../views/error.pug');
     panel.webview.html = pug.renderFile(tpl); 
 }
 

@@ -32,15 +32,15 @@ export default async function news (
             {
                 enableScripts: true,
                 retainContextWhenHidden: true,
-                localResourceRoots: [vscode.Uri.file(path.resolve(__dirname, webviewDir))]
+                localResourceRoots: [vscode.Uri.file(path.resolve(context.extensionPath, webviewDir))]
             }
         );
-        const tpl = path.resolve(__dirname, './../views/index.pug');
+        const tpl = path.resolve(context.extensionPath, './../views/index.pug');
         const options = getPugOptions(context, {
             news: data
         });
         panel.webview.html = pug.renderFile(tpl, options); 
     } catch (error) {
-        handleError(error, title);
+        handleError(context, error, title);
     }   
 }
