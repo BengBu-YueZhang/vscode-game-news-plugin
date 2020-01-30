@@ -10,9 +10,15 @@ html
             http-equiv="X-UA-Compatible"
             content="ie=edge"
         )
+        script.
+            //- 注入全局变量
+            //- Thank you https://segmentfault.com/q/1010000010674249
+            const GLOBAL_DATA = "#{GLOBAL_DATA}";
         link(rel="stylesheet", href=`${css.reset}`)
         link(rel="stylesheet", href=`${css.main}`)
     body
         div(id="app")
+            h1 {{ news.length }}
         script(src=`${js.vue}`)
         script(src=`${js.main}`)
+        

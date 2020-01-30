@@ -47,7 +47,7 @@ export function getPugOptions (
     GlobalData: IData
 ) {
     return {
-        GlobalData,
+        GLOBAL_DATA: JSON.stringify(GlobalData),
         js: {
             vue: getLocalURI(context, 'js/vue.js'),
             main: getLocalURI(context, 'js/main.js')
@@ -55,8 +55,7 @@ export function getPugOptions (
         css: {
             reset: getLocalURI(context, 'css/reset.css'),
             main: getLocalURI(context, 'css/main.css')
-        },
-        test: 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js'
+        }
     };
 }
 
