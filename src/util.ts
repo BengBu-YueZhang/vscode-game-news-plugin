@@ -18,7 +18,7 @@ export function handleError (
         title,
         vscode.ViewColumn.One
     );
-    const tpl = path.resolve(context.extensionPath, './../views/error.pug');
+    const tpl = path.resolve(context.extensionPath, 'views/error.pug');
     panel.webview.html = pug.renderFile(tpl); 
 }
 
