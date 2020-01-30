@@ -18,7 +18,20 @@ html
         link(rel="stylesheet", href=`${css.main}`)
     body
         div(id="app")
-            h1 {{ news.length }}
+            h1(class="title") 游戏新闻
+            ul(class="news")
+                li(
+                    v-for="n in news"
+                    class="news-item"
+                )
+                    div
+                        span(class="news-item-source") 来源 {{ n.source | cn }}
+                        span(class="news-item-title") {{ n.title }}
+                    div
+                        span(
+                            class="news-item-copy"
+                            @click="handleCopyLink"
+                        ) 拷贝链接
         script(src=`${js.vue}`)
         script(src=`${js.main}`)
         

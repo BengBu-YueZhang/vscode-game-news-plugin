@@ -1,0 +1,38 @@
+body {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 26px;
+    line-height: 40px;
+}
+
+.news {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.news-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.news-item-source {
+    color: rgba(0, 0, 0, .54);
+}
+
+.news-item-title {
+    margin-left: 15px;
+    color: rgba(0, 0, 0, .87);
+}
+
+.news-item-copy {
+    margin-left: 35px;
+    color: rgba(0, 0, 0, .54); 
+}
