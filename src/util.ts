@@ -18,7 +18,8 @@ export function handleError (
         title,
         vscode.ViewColumn.One
     );
-    const tpl = path.resolve(context.extensionPath, 'views/error.pug');
+    const webviewDir = path.join(context.extensionPath, 'views');
+    const tpl = path.join(webviewDir, 'error.pug');
     panel.webview.html = pug.renderFile(tpl); 
 }
 
@@ -35,7 +36,7 @@ export function getLocalURI (
     context: vscode.ExtensionContext,
     filePath: string
 ) {
-    const webviewDir = path.resolve(context.extensionPath, 'views');
+    const webviewDir = path.join(context.extensionPath, 'views');
     return vscode.Uri.file(path.join(webviewDir, ...filePath.split('/'))).with({
         scheme: 'vscode-resource'
     });

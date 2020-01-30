@@ -24,7 +24,7 @@ export default async function news (
             const news = await api();
             return filterNewsRange(news, newsRange);
         });
-        const webviewDir = path.resolve(context.extensionPath, 'views');
+        const webviewDir = path.join(context.extensionPath, 'views');
         const panel = vscode.window.createWebviewPanel(
             viewType,
             title,
@@ -32,10 +32,10 @@ export default async function news (
             {
                 enableScripts: true,
                 retainContextWhenHidden: true,
-                localResourceRoots: [vscode.Uri.file(path.resolve(context.extensionPath, webviewDir))]
+                localResourceRoots: [vscode.Uri.file(webviewDir)]
             }
         );
-        const tpl = path.resolve(context.extensionPath, 'views/index.pug');
+        const tpl = path.join(webviewDir, 'index.pug');
         const options = getPugOptions(context, {
             news: data
         });
