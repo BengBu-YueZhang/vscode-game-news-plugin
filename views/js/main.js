@@ -21,7 +21,6 @@ const app = new Vue({
     },
     methods: {
         handlePreview (url) {
-            console.log('发送消息')
             vscode.postMessage({
                 command: 'preview',
                 text: url

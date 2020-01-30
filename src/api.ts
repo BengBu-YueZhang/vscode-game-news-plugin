@@ -9,9 +9,9 @@ export interface INews {
     source: string;
 }
 
-export default async function api (): Promise<INews[]> {
+export default async function api (range: number = 1): Promise<INews[]> {
     try {
-        const filename = `${getTString(new Date().getTime() - 1 * 60 * 60 * 1000)}.js`;
+        const filename = `${getTString(new Date().getTime() - range * 60 * 60 * 1000)}.js`;
         const url = `http://news.bengbuzhangyue.xyz/${filename}`;
         const result = await axios.get(url);
         return result.data;

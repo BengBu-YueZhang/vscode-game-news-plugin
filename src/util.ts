@@ -87,3 +87,9 @@ export function open (url: string) {
             break;
     }
 }
+
+export function getPluginOptions(
+    key: string
+): any {
+    return vscode.workspace.getConfiguration(key);
+}
