@@ -3,6 +3,7 @@ import * as path from 'path';
 import * as pug from 'pug';
 import { INews } from './api';
 import { NewsRange } from './news';
+import { exec } from 'child_process';
 
 export interface IData {
     [key: string]: any;
@@ -70,5 +71,19 @@ export function filterNewsRange (news: INews[], range: NewsRange): INews[] {
         case 'All':
         default:
             return news;
+    }
+}
+
+export function open (url: string) {
+    switch (process.platform) {
+        case "darwin":
+            exec(`open ${url}`);
+            break;
+        case "win32":
+            exec(`start ${url}`);
+            break;
+        default:
+            exec(`open ${url}`);
+            break;
     }
 }

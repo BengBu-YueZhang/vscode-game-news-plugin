@@ -30,8 +30,8 @@ html
                     div
                         span(
                             class="news-item-copy"
-                            @click="handleCopyLink"
-                        ) 拷贝链接
+                            v-on:click="handlePreview(n.src)"
+                        ) 浏览
         script(src=`${js.vue}`)
         script(src=`${js.main}`)
         

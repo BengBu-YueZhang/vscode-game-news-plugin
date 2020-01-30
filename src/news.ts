@@ -2,7 +2,8 @@ import * as vscode from 'vscode';
 import {
     handleError,
     getPugOptions,
-    filterNewsRange
+    filterNewsRange,
+    open
 } from './util';
 import * as pug from 'pug';
 import * as path from 'path';
@@ -39,7 +40,15 @@ export default async function news (
         const options = getPugOptions(context, {
             news: data
         });
-        panel.webview.html = pug.renderFile(tpl, options); 
+        panel.webview.html = pug.renderFile(tpl, options);
+        console.log('监听');
+        panel.webview.onDidReceiveMessage(message => {
+            switch (message.command) {
+                case 'preview':
+                    open(message.text);
+                    return;
+            }
+        }, undefined, context.subscriptions);
     } catch (error) {
         handleError(context, error, title);
     }   
