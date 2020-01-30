@@ -3,12 +3,13 @@ body {
     height: auto;
     padding: 30px;
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: #282b34;
 }
 
 .title {
     font-size: 26px;
     line-height: 40px;
+    color: #d3d3d3;
 }
 
 .news {
@@ -25,15 +26,17 @@ body {
 }
 
 .news-item-source {
-    color: rgba(0, 0, 0, .54);
+    font-size: 12px;
+    color: #eeeeee;
 }
 
 .news-item-title {
     margin-left: 15px;
-    color: rgba(0, 0, 0, .87);
+    color: #d3d3d3;
 }
 
 .news-item-copy {
+    font-size: 12px;
     margin-left: 35px;
-    color: rgba(0, 0, 0, .54); 
+    color: #eeeeee; 
 }
