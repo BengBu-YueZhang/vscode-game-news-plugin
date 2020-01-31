@@ -8,6 +8,8 @@ surreptitiously browsing game news during work hours (机核网, ign, 游民星�
 
 ## Install
 
+![install](https://i.loli.net/2020/01/31/CKXnPvLN2OWeb7l.png)
+
 ## Use
 
 ## Future
