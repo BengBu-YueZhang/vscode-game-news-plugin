@@ -1,5 +1,6 @@
 {
 	"name": "game-news",
+	"publisher": "bbyue",
 	"displayName": "gamenews",
 	"description": "surreptitiously browsing game news during work hours (机核网, ign, 游民星空)",
 	"version": "0.0.1",
