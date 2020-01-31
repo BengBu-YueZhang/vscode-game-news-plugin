@@ -12,10 +12,10 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.游民星空",
-		"onCommand:extension.IGN",
-		"onCommand:extension.机核网",
-		"onCommand:extension.GameNews"
+		"onCommand:game.游民星空",
+		"onCommand:game.IGN",
+		"onCommand:game.机核网",
+		"onCommand:game.GameNews"
 	],
 	"main": "./out/index.js",
 	"contributes": {
@@ -31,29 +31,29 @@
 		},
 		"commands": [
 			{
-				"command": "extension.游民星空",
+				"command": "game.游民星空",
 				"title": "游民星空",
 				"category": "Game"
 			},
 			{
-				"command": "extension.IGN",
+				"command": "game.IGN",
 				"title": "IGN",
 				"category": "Game"
 			},
 			{
-				"command": "extension.机核网",
+				"command": "game.机核网",
 				"title": "机核网",
 				"category": "Game"
 			},
 			{
-				"command": "extension.GameNews",
+				"command": "game.GameNews",
 				"title": "GameNews",
 				"category": "Game"
 			}
 		],
 		"keybindings": [
 			{
-				"command": "extension.GameNews",
+				"command": "game.GameNews",
 				"key": "ctrl+g+n",
 				"mac": "cmd+g+n"
 			}
