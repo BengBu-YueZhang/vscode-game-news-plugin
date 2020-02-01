@@ -7,5 +7,7 @@ const file = files.filter(name => {
     return regexp.test(name);
 });
 
-shell.exec(`rm ${file[0]}`);
+if (file[0]) {
+    shell.exec(`rm ${file[0]}`);
+}
 shell.exec('npm run local:dev');
