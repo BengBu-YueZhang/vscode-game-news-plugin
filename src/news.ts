@@ -11,9 +11,6 @@ import * as path from 'path';
 import api from './api';
 import axios from 'axios';
 
-console.log(axios);
-console.log(pug);
-
 export type NewsRange = 'IGN' | '机核网' | '游民星空' | 'All';
 
 export default async function news (

@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import news from './news';
+import axios from 'axios';
 
 export function activate(context: vscode.ExtensionContext) {
 
