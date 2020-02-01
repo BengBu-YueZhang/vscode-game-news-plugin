@@ -12,6 +12,8 @@ surreptitiously browsing game news during work hours (机核网, ign, 游民星�
 
 ## Use
 
+![use](https://i.loli.net/2020/02/01/MOmIXauBdv2RPnp.png)
+
 ## Future
 
 More gaming news media
