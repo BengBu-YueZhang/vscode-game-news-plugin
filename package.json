@@ -67,7 +67,8 @@
 		"pretest": "yarn run compile",
 		"test": "node ./out/test/runTest.js",
 		"package": "node /usr/local/Cellar/node/11.2.0/lib/node_modules/vsce/out/vsce package",
-		"publish": "node /usr/local/Cellar/node/11.2.0/lib/node_modules/vsce/out/vsce publish"
+		"publish": "node /usr/local/Cellar/node/11.2.0/lib/node_modules/vsce/out/vsce publish",
+		"local": "node local-install.js"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -78,10 +79,10 @@
 		"mocha": "^6.2.2",
 		"tslint": "^5.20.0",
 		"typescript": "^3.6.4",
-		"vscode-test": "^1.2.2"
+		"vscode-test": "^1.2.2",
+		"@types/pug": "^2.0.4"
 	},
 	"dependencies": {
-		"@types/pug": "^2.0.4",
 		"axios": "^0.19.2",
 		"pug": "^2.0.4"
 	}
