@@ -68,7 +68,8 @@
 		"test": "node ./out/test/runTest.js",
 		"package": "node /usr/local/Cellar/node/11.2.0/lib/node_modules/vsce/out/vsce package",
 		"publish": "node /usr/local/Cellar/node/11.2.0/lib/node_modules/vsce/out/vsce publish",
-		"local": "node local-install.js"
+		"local:install": "node local-install.js",
+		"local:dev": "npm run package && npm run local:install"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
