@@ -10,4 +10,4 @@ const file = files.filter(name => {
 if (file[0]) {
     shell.exec(`rm ${file[0]}`);
 }
-shell.exec('npm run local:dev');
+shell.exec('npm run local:install');
