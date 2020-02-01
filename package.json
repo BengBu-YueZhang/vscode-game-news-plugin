@@ -4,7 +4,7 @@
 	"displayName": "gamenews",
 	"description": "surreptitiously browsing game news during work hours (机核网, ign, 游民星空)",
 	"repository": "https://github.com/BengBu-YueZhang/vscode-game-news-plugin",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
