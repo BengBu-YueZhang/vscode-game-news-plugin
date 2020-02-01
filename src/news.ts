@@ -3,13 +3,11 @@ import {
     handleError,
     getPugOptions,
     filterNewsRange,
-    open,
-    getPluginOptions
+    open
 } from './util';
 import * as pug from 'pug';
 import * as path from 'path';
 import api from './api';
-import axios from 'axios';
 
 export type NewsRange = 'IGN' | '机核网' | '游民星空' | 'All';
 
